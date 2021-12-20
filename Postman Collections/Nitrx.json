@@ -1790,6 +1790,34 @@
             "description": "This api is for Realtime user search"
           },
           "response": []
+        },
+        {
+          "name": "List Reported Users",
+          "id": "3cd1d699-d367-4199-af25-62693c701c1d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQxNDYxMzQ4LCJqdGkiOiI5YTBkZDc4ODJiNDg0YTI4YTk5MDQyMzU2NTBjMGY5MiIsInVzZXJfaWQiOjIwN30.fu-XDRAPDeYfe0pU2f93ETPAkAYbm3gb3QhBNndYLD0"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"report\": \"other\",\r\n    \"other\": \"This person hates Assassins Creed.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/users/reported/"
+          },
+          "response": []
         }
       ],
       "id": "5b14191f-160d-45b0-91da-a106110e15a0"
