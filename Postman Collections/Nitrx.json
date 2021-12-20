@@ -1,0 +1,2931 @@
+{
+  "info": {
+    "_postman_id": "82becb63-d2fb-4edc-88ba-c38e8eab7edc",
+    "name": "Nitrx API Copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Authentication",
+          "item": [
+            {
+              "name": "Login",
+              "_postman_id": "95ea13e0-d1e7-400b-838e-83c9e1de880e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "bhamilton",
+                      "description": "required",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "password",
+                      "value": "theultimatepassword",
+                      "description": "required",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "username",
+                      "value": "devzakir\n",
+                      "type": "text"
+                    },
+                    {
+                      "key": "password",
+                      "value": "Passw$ord123",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/login/",
+                "description": "Main Login Endpoint"
+              },
+              "response": []
+            },
+            {
+              "name": "Login 2nd Step",
+              "_postman_id": "d6e7eab5-c8a6-49ad-bd88-9d3f6245b47b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "ephemeral_token",
+                      "value": "3-qwxlgk-f2979df999e713fd2ab80225da9c9f5ea77a3bf9",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "code",
+                      "value": "400553",
+                      "description": "required",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/login/2fa/",
+                "description": "If 2 step verification is used, this endpoint should be used to verify second step."
+              },
+              "response": []
+            },
+            {
+              "name": "Register",
+              "_postman_id": "f26c6f2a-6a75-4ed4-9573-7390fd4983f7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "virus18",
+                      "contentType": "string",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "email",
+                      "value": "virus18@mail.com",
+                      "contentType": "email",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "password",
+                      "value": "awesomevirus18",
+                      "contentType": "string",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "John",
+                      "contentType": "string",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "Doe",
+                      "contentType": "string",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "avatar",
+                      "contentType": "string",
+                      "description": "not required",
+                      "type": "file",
+                      "src": "/C:/Users/xayed/Pictures/140x140.jpg",
+                      "disabled": true
+                    },
+                    {
+                      "key": "age",
+                      "value": "69",
+                      "contentType": "string",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "bio",
+                      "value": "My Awesome Bio",
+                      "contentType": "string",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "gender",
+                      "value": "male",
+                      "contentType": "string",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "phone_number",
+                      "value": "+8801912345678",
+                      "contentType": "Phone Number (With Country Code)",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "date_of_birth",
+                      "value": "1952-12-28",
+                      "contentType": "YY-MM-D",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "country",
+                      "value": "Bangladesh",
+                      "contentType": "string",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "search_privacy",
+                      "value": "true",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/register/",
+                "description": "Main Registration Endpoint"
+              },
+              "response": []
+            },
+            {
+              "name": "Refresh Token",
+              "_postman_id": "daaf77cf-d3dc-4f34-836e-272a2016d904",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "refresh",
+                      "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYyNzIwNjM4NywianRpIjoiMTQ2YmEzZmI3MjQ1NDE4M2E1NGNlYjA4MjgwM2JjNTMiLCJ1c2VyX2lkIjozfQ.oE_Wh3Z8KLjEIaltAycaYQnIBDQSv2H3mLnwNzptqQc",
+                      "description": "required",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/refresh/",
+                "description": "Get New Access Token"
+              },
+              "response": []
+            },
+            {
+              "name": "Email Verified",
+              "_postman_id": "0a23a12e-ca7b-4f12-b6c3-7114b97d95bc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/verify/email/",
+                "description": "Get token in email for verification"
+              },
+              "response": []
+            },
+            {
+              "name": "Email Verified",
+              "_postman_id": "7f8b3e38-f97d-493e-9d2d-f7021fb5e7dd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "code",
+                      "value": "1234",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/verify/email/",
+                "description": "Request for verifying Email"
+              },
+              "response": []
+            },
+            {
+              "name": "Forget Password Request Email",
+              "_postman_id": "257a23a7-bf30-4a83-9312-99baae6f8b99",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "q",
+                      "value": "virus2",
+                      "description": "required",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/reset-password/",
+                "description": "Request for Password Reset.\n\nValue of **q** should be **username** or email."
+              },
+              "response": []
+            },
+            {
+              "name": "Forget Password Confirm",
+              "_postman_id": "fd558095-c7e3-4fa4-b240-cd85f956f3ac",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "token",
+                      "value": "c11c2cb30fcf9e3e",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "password",
+                      "value": "awesomevirus4",
+                      "description": "required",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/reset-password/confirm/",
+                "description": "Confirm password change with token(can be found in email) and new password."
+              },
+              "response": []
+            },
+            {
+              "name": "User Exists",
+              "_postman_id": "a404d2e7-9e05-47d8-9bef-0f3a6f6c3385",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "virus4",
+                      "description": "optional (one at a time)",
+                      "type": "text"
+                    },
+                    {
+                      "key": "email",
+                      "value": "virius4@mail.com",
+                      "description": "optional (one at a time)",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/user-exists/",
+                "description": "Check if username / email exists.\n\n**NB:** Either **username** or **email** should be sent. Not both at once."
+              },
+              "response": []
+            },
+            {
+              "name": "Logout",
+              "_postman_id": "497ebb92-efbb-490f-b44a-9f13c3948f9c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "refresh",
+                      "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYyOTk2OTIyNSwianRpIjoiYjk2NWY2ZGRiNjJiNDRmNDhmMjNkOGI1NzRhNTQyZjkiLCJ1c2VyX2lkIjozfQ.t7dUUSq6Q88bbUcDjD4lN17IyOzZmhyx8rW0L_aJjC8",
+                      "description": "required",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/logout/",
+                "description": "Main Log Out Endpoint"
+              },
+              "response": []
+            },
+            {
+              "name": "Extra",
+              "_postman_id": "46dc4d8e-ebd7-4660-b927-dca93a42cd70",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI5NTQ4OTIzLCJqdGkiOiJlMjRlOTA5YmVmZmY0NmFkOTJjMTMwZjgwZTBmNzBjMyIsInVzZXJfaWQiOjF9.pgidSqYJnmkShRhqwJ-YADtxeYESS-D7V0aHJbFZsw0"
+                  }
+                },
+                "method": "POST",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/clean-outstanding-token/",
+                "description": "**For Backend Use Only**"
+              },
+              "response": []
+            },
+            {
+              "name": "OTP verification",
+              "_postman_id": "e5fe1738-a51b-4780-b97c-bf4f33b364ed",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwMjYyMjkyLCJqdGkiOiJkMjMzMWI0MDJhMzE0Zjg0YWY5NmM2MGY3NjY5NmZmZCIsInVzZXJfaWQiOjIwN30.ac45tfJCmpiib8d7jZSBqXKoYVWoLPJ5kXMqRcwHfIs"
+                  }
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"password\": \r\n        \"Now@12345\"\r\n    ,\r\n    \"q\": \r\n        \"bhamilton\",\r\n        \"code\":\"039350\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/reset-password/"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "78deccc0-b86d-4b6b-9df3-8558e122e1ac",
+          "description": "**Everything about authentication**",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Information",
+          "item": [
+            {
+              "name": "Business Category List",
+              "_postman_id": "65045023-95fe-4685-901b-e7413641ac5c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/business-categories/"
+              },
+              "response": []
+            },
+            {
+              "name": "Create Business Category",
+              "_postman_id": "0661cc76-ee3b-4c35-a10c-32f234e97bba",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Information Technology (IT)",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/business-categories/"
+              },
+              "response": []
+            },
+            {
+              "name": "Update Business Category",
+              "_postman_id": "94eb435b-506c-4367-bc01-c7a59f0aec65",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Online Shopping",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/business-categories/1/"
+              },
+              "response": []
+            },
+            {
+              "name": "Delete Business Category",
+              "_postman_id": "f728f097-0944-4eb6-b825-0183a3e94314",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Online Shopping",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/business-categories/1/"
+              },
+              "response": []
+            },
+            {
+              "name": "Profile",
+              "_postman_id": "65148495-c0c4-4a51-9446-c526a3478d02",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/profile",
+                "description": "Get Profile Information for Updating Profile Data.\n\n**NB:** For settings page only."
+              },
+              "response": []
+            },
+            {
+              "name": "Update Profile",
+              "_postman_id": "395ed626-507d-459c-8259-681626cd78bc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "avatar",
+                      "description": "optional",
+                      "type": "file",
+                      "src": "/C:/Users/xayed/Pictures/download.jpg",
+                      "disabled": true
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "Ariful",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "Islam",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "username",
+                      "value": "arif",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "bio",
+                      "value": "My Awesome Bio",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "email",
+                      "value": "arif@mail.com",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "gender",
+                      "value": "male",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "phone_number",
+                      "value": "+8801681729831",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "age",
+                      "value": "69",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "date_of_birth",
+                      "value": "1952-12-28",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "country",
+                      "value": "Bangladesh",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "search_privacy",
+                      "value": "false",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "otp_enabled",
+                      "value": "false",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "business_type",
+                      "value": "2",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/profile/",
+                "description": "Profile Information Update"
+              },
+              "response": []
+            },
+            {
+              "name": "User Info",
+              "_postman_id": "2ef5584e-78d6-46a1-abc1-9c24755dfacc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/information",
+                "description": "Not needed in New UI"
+              },
+              "response": []
+            },
+            {
+              "name": "Update User Info",
+              "_postman_id": "dd5b7fd9-8c4c-49e5-86a9-3dc00431b57c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"country\": \"Bangladesh\",\r\n    \"search_privacy\": true,\r\n    \"store_contacts\": true,\r\n    \"gender\": \"male\",\r\n    \"otp_enabled\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/information/",
+                "description": "Not needed in New UI"
+              },
+              "response": []
+            },
+            {
+              "name": "Change Password",
+              "_postman_id": "aaad7687-1a63-4638-b3ba-66fc93d7307f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "old_password",
+                      "value": "awesomevirus11",
+                      "description": "required",
+                      "type": "text"
+                    },
+                    {
+                      "key": "new_password",
+                      "value": "awesomevirus1",
+                      "description": "required",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/change-password/",
+                "description": "Change password for authenticated user only."
+              },
+              "response": []
+            },
+            {
+              "name": "Enable 2fa",
+              "_postman_id": "68f4e1ff-74d1-46e1-91dd-e28956d63d30",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/2fa/email/activate/",
+                "description": "Enable 2FA for an account. This endpoint should send an email to confirm."
+              },
+              "response": []
+            },
+            {
+              "name": "Enable Confirm 2fa",
+              "_postman_id": "badf554f-44cb-4288-a64a-28d056ac270d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "code",
+                      "value": "123456",
+                      "description": "required",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/2fa/email/activate/confirm/",
+                "description": "Confirm enabling 2FA for an account."
+              },
+              "response": []
+            },
+            {
+              "name": "Disable 2fa",
+              "_postman_id": "c40f6075-a8d3-4f42-9917-a02bd6a3d4ad",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/2fa/email/deactivate/",
+                "description": "Disable 2FA for an account."
+              },
+              "response": []
+            },
+            {
+              "name": "Convert to Business Account",
+              "_postman_id": "62edffba-beea-4c23-a10d-f1154f955fe2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/convert/",
+                "description": "Convert **Personal Account** to **Business Account**."
+              },
+              "response": []
+            },
+            {
+              "name": "Get Website URL",
+              "_postman_id": "7719b4cd-3cfd-4da2-a463-df3306b3d072",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/website-url/",
+                "description": "Get Website URL of an account."
+              },
+              "response": []
+            },
+            {
+              "name": "Update Website URL",
+              "_postman_id": "c615761a-c35b-4d3b-9d5a-27ec218505b1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "example.com",
+                      "description": "optional",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/website-url/",
+                "description": "Update Website URL of an account.\n\n**NB:** Website must be verified after updating."
+              },
+              "response": []
+            },
+            {
+              "name": "Get Verification ID",
+              "_postman_id": "0241f0e1-84bf-43d0-8dbe-9aa112f17bf1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/website-url/verify/",
+                "description": "Get verification ID to put the ID into the TXT  Record in the domain."
+              },
+              "response": []
+            },
+            {
+              "name": "Verify Website",
+              "_postman_id": "d3df1886-ff0f-4cf9-a2e2-4013819d2f03",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/website-url/verify/",
+                "description": "Verify website after adding TXT Record in the domain."
+              },
+              "response": []
+            },
+            {
+              "name": "Get Selected Categories",
+              "_postman_id": "9057e800-e2c2-4440-9106-e501864114f1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/cat-selection/",
+                "description": "Get selected categories of an account."
+              },
+              "response": []
+            },
+            {
+              "name": "Select Categories",
+              "_postman_id": "ae889899-5c89-4a78-a65e-2c0c29e7107a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"categories\": [\r\n        3,\r\n        5,\r\n        6\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{NITRX_ENDPOINT}}/auth/cat-selection/",
+                "description": "Select Favourite Categories"
+              },
+              "response": []
+            },
+            {
+              "name": "Block List",
+              "_postman_id": "ad3417d8-1f95-4fae-9345-a5c85d8ab1f4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/blocked-list/",
+                "description": "Get Blocked Users List"
+              },
+              "response": []
+            },
+            {
+              "name": "Report List",
+              "_postman_id": "f4a67921-5235-4800-b0a1-681a3bb84e95",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/report-list/",
+                "description": "Get Reported Users List"
+              },
+              "response": []
+            },
+            {
+              "name": "Deactivate",
+              "_postman_id": "91810360-5e3c-485b-950f-81d8d7aa5271",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{NITRX_ENDPOINT}}/auth/deactivate/",
+                "description": "Temporarily Deactivate Account"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "c31b8db8-f4ba-4521-a8b2-59cfaf8de9b4",
+          "description": "These API collection is for profile settings page only.",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "ffa64b1d-aed4-4250-8ff7-21fdca6d7836",
+      "description": "**Authenticated User Related Settings.**"
+    },
+    {
+      "name": "Post",
+      "item": [
+        {
+          "name": "Own Posts",
+          "_postman_id": "50a14197-6197-4c4a-baac-461c0a55d537",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{NITRX_ENDPOINT}}/posts/?page=1",
+              "host": [
+                "{{NITRX_ENDPOINT}}"
+              ],
+              "path": [
+                "posts",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Post Detail",
+          "_postman_id": "0cb00f02-95b5-4db4-9568-73e94d7bb3c2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/posts/be6b668b-d522-4e0f-a140-de2c54f9a76a/"
+          },
+          "response": []
+        },
+        {
+          "name": "Upload New Post",
+          "_postman_id": "a1b71403-e06e-4eaf-8402-d1b58af2ad2a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "My Awesome Post C1",
+                  "description": "Required",
+                  "type": "text"
+                },
+                {
+                  "key": "category",
+                  "value": "46",
+                  "description": "Required",
+                  "type": "text"
+                },
+                {
+                  "key": "media_list",
+                  "description": "Required",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/xayed/Pictures/140x140.jpg",
+                    "/C:/Users/xayed/Pictures/download.jpg"
+                  ]
+                },
+                {
+                  "key": "website",
+                  "value": "https://example.com",
+                  "description": "Required",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "keywords",
+                  "value": "awesome, content",
+                  "description": "Optional",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "This is the post description",
+                  "description": "Optional",
+                  "type": "text",
+                  "disabled": true
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Post",
+          "_postman_id": "eaa0f487-461a-452e-8c62-796de37919f2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"My Awesome Post 32 C1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/515e16a1-d9fe-400e-9dc5-c179f19c333c/"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Post",
+          "_postman_id": "41169a0c-c473-4266-bf98-9d3f028dae1a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/posts/515e16a1-d9fe-400e-9dc5-c179f19c333c/"
+          },
+          "response": []
+        },
+        {
+          "name": "Saved Posts",
+          "_postman_id": "75d11919-7933-44a6-9590-c809ed7a4a08",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/bookmarks/"
+          },
+          "response": []
+        },
+        {
+          "name": "Save Post",
+          "_postman_id": "5e08dbcc-8770-4198-92fc-ceb8ddb2e013",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTg0NjA4NiwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.vAuXdME6r0roKxWQd3pRwlLXbS917pt1xLXNp16Nd6U",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/posts/073bbafd-0f44-4cf1-bb0c-4d0220e79033/bookmark/"
+          },
+          "response": []
+        },
+        {
+          "name": "UnSave Post",
+          "_postman_id": "bb367a79-4269-499a-bdb8-13c61a7edd58",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTg0NjA4NiwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.vAuXdME6r0roKxWQd3pRwlLXbS917pt1xLXNp16Nd6U",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/posts/073bbafd-0f44-4cf1-bb0c-4d0220e79033/bookmark/"
+          },
+          "response": []
+        },
+        {
+          "name": "Rate On Post",
+          "_postman_id": "c1e10ccc-07c5-4ab6-a504-e90d531e1374",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\": \"10\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/073bbafd-0f44-4cf1-bb0c-4d0220e79033/rate/"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Post Comments",
+          "_postman_id": "43b537cb-18d0-40f6-91b5-bf66dbd7f05d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/posts/073bbafd-0f44-4cf1-bb0c-4d0220e79033/comments/"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Child Comments",
+          "_postman_id": "4184f515-845d-46ec-9b92-1f24386c094d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/posts/comments/1/childs/"
+          },
+          "response": []
+        },
+        {
+          "name": "Comment On Post",
+          "_postman_id": "73824794-79fa-43c4-b9d7-bd658fdd0f94",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"comment\": \"Awesome Post Vai Vai Vai VAi\",\r\n    \"parent\": 13499,\r\n    \"mentioned_users\": [\r\n        \"virus2\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/073bbafd-0f44-4cf1-bb0c-4d0220e79033/comments/"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Comment",
+          "_postman_id": "83df89a4-c3ab-4872-981f-7fd9e1f41524",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"comment\": \"Dhur Faltu Post Eda\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/comments/3/"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Comment",
+          "_postman_id": "3de84a43-2e0b-4ffd-9368-6287decdd7ac",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"comment\": \"Awesome Post Vai Vai Vai VAi\",\r\n    \"parent\": 1,\r\n    \"mentioned_users\": [\r\n        4\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/comments/3/"
+          },
+          "response": []
+        },
+        {
+          "name": "Rate on Comment",
+          "_postman_id": "7e967e62-fa84-4ca4-9797-ae0a02aaa8cc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\": \"7\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/comments/1843/rate/"
+          },
+          "response": []
+        },
+        {
+          "name": "Search Post",
+          "_postman_id": "c3edd8ad-8d95-47ac-b3ff-a0626043cd4b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\": \"Post\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/search/",
+            "description": "This api is for realtime Posts search"
+          },
+          "response": []
+        },
+        {
+          "name": "Trending Posts",
+          "_postman_id": "d149cfe7-fa8c-4e15-98be-7e1a0ce4797a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\": \"Post\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/trending/"
+          },
+          "response": []
+        },
+        {
+          "name": "Filter Posts by User",
+          "_postman_id": "7116fbdf-36da-477e-8d15-458089c0c4ca",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"user\",\r\n    \"user\": \"virus2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/filter/"
+          },
+          "response": []
+        },
+        {
+          "name": "Filter Post by Following",
+          "_postman_id": "9f1a97d7-e7b9-466b-9252-2a371892af1a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"following\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{NITRX_ENDPOINT}}/posts/filter/?page=1",
+              "host": [
+                "{{NITRX_ENDPOINT}}"
+              ],
+              "path": [
+                "posts",
+                "filter",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter Post By Category",
+          "_postman_id": "bac65b70-b4ae-4d45-ab3b-7054693cc702",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"category\",\r\n    \"category_id\": \"1,2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/filter/"
+          },
+          "response": []
+        },
+        {
+          "name": "Report Post",
+          "_postman_id": "54a152e6-5b26-4ff8-97c1-2f9dd6929b57",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTg0NjA4NiwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.vAuXdME6r0roKxWQd3pRwlLXbS917pt1xLXNp16Nd6U",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"report\": \"other\",\r\n    \"other\": \"This person hates Assassins Creed.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/26ac0fc6-0eb8-43b1-8d5d-f155a0afccf9/report/"
+          },
+          "response": []
+        },
+        {
+          "name": "Filter Post By Category(Other)",
+          "_postman_id": "81d42a1d-cf97-469c-9e68-d7a21270d40c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM5NTk1ODQxLCJqdGkiOiJkNDI1ZDE0M2VkMTM0NDc1OTY1Y2ZhZTZlZTE0YWI1NSIsInVzZXJfaWQiOjIwN30.ZZBhH2-4Bhq8JwtqeDHeSJrW5asCqu_a13dF-GwuLJM"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM5MjI5MDI4LCJqdGkiOiIwYzliNTVkNmE3NWE0OTIyYWZiY2VhYWViNTY1M2IwZCIsInVzZXJfaWQiOjIwN30.Z1jmWJ9DU00oTF_6IDvg1u3H0f5qxSWahakSP3LniGY",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"other\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/filter/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "4a5d44a7-fce6-48ba-bb3b-15f3529dbaaf"
+    },
+    {
+      "name": "Notification",
+      "item": [
+        {
+          "name": "Notification Status",
+          "_postman_id": "d48cd95e-ab52-47e1-88e5-dd499942323c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/notifications/status/"
+          },
+          "response": []
+        },
+        {
+          "name": "Notification List",
+          "_postman_id": "99a4e68b-b716-4fb7-b3b8-742673d574e2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/notifications/"
+          },
+          "response": []
+        },
+        {
+          "name": "Notification Mark all as read",
+          "_postman_id": "831f2a4d-8238-4452-b36c-2f6f3105cd73",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/notifications/mark-all-as-read/"
+          },
+          "response": []
+        },
+        {
+          "name": "Notification Mark as Read",
+          "_postman_id": "72ffa51b-aa27-4592-8152-7b3018f5ed72",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/notifications/27/mark-as-read/"
+          },
+          "response": []
+        },
+        {
+          "name": "Notification Mark as UnRead",
+          "_postman_id": "8fcb56d9-d590-4789-99f1-e3117b834b90",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/notifications/27/mark-as-unread/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "74781a5b-f47d-4785-b1b6-d89b0f7be982"
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "UserProfile",
+          "_postman_id": "423fae4b-4f9a-460e-b127-1c6338f8910d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/users/virus2/"
+          },
+          "response": []
+        },
+        {
+          "name": "Following List",
+          "_postman_id": "5e8b5492-bbf0-4e0c-aea3-a33057594d69",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/users/virus11/followings/"
+          },
+          "response": []
+        },
+        {
+          "name": "Followers List",
+          "_postman_id": "a97a9e48-2ac7-4b5b-b856-d4f871f9ba37",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/users/virus11/followers/"
+          },
+          "response": []
+        },
+        {
+          "name": "Follow",
+          "_postman_id": "59310245-47ed-45a0-9aab-71ab994dc13d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/users/virus2/follow/"
+          },
+          "response": []
+        },
+        {
+          "name": "Unfollow",
+          "_postman_id": "bb9f8462-7d29-4e6a-a489-dd05a7b6715a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/users/virus3/follow/"
+          },
+          "response": []
+        },
+        {
+          "name": "Block User",
+          "_postman_id": "5092adca-469d-4e00-ac30-39d92908aee3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/users/virus2/block/"
+          },
+          "response": []
+        },
+        {
+          "name": "UnBlock User",
+          "_postman_id": "b6486179-9020-4a6c-bd81-9420211f92f2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/users/virus2/block/"
+          },
+          "response": []
+        },
+        {
+          "name": "Report User",
+          "_postman_id": "104ed5e3-001a-4a1f-8a69-c64634f73f95",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"report\": \"other\",\r\n    \"other\": \"This person hates Assassins Creed.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/users/virus18/report/"
+          },
+          "response": []
+        },
+        {
+          "name": "Search User",
+          "_postman_id": "8dff70e5-8568-40c8-a3d9-85e90118d85b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"virus\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/users/search/",
+            "description": "This api is for Realtime user search"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "5b14191f-160d-45b0-91da-a106110e15a0"
+    },
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "Get Category List",
+          "_postman_id": "a463536d-9906-44f5-898a-266722aa6a68",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/categories/"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Category",
+          "_postman_id": "153cab73-f387-43fd-8b80-f4266d7d7648",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Ultimate Faltu",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/xayed/Documents/Ntrix/Chat – 1.png"
+                },
+                {
+                  "key": "parent",
+                  "value": "4",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/categories/"
+          },
+          "response": []
+        },
+        {
+          "name": "Not Selected Categories",
+          "_postman_id": "0bd5d863-f942-4680-bdf7-49ec63d63f22",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/categories/not-selected/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "de0ca076-eb8d-4927-a401-169e11bc02ad"
+    },
+    {
+      "name": "Story",
+      "item": [
+        {
+          "name": "Story List",
+          "_postman_id": "792eec53-e26f-4224-a5d0-0295a667e919",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/stories/"
+          },
+          "response": []
+        },
+        {
+          "name": "Story Upload",
+          "_postman_id": "bae7f2f2-1512-467e-b331-9abf459874b3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "My Awesome Story",
+                  "type": "text"
+                },
+                {
+                  "key": "story_url",
+                  "value": "Nai",
+                  "type": "text"
+                },
+                {
+                  "key": "url",
+                  "value": "Nai",
+                  "type": "text"
+                },
+                {
+                  "key": "story_type",
+                  "value": "image",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "/C:/Users/xayed/Documents/Code/nitrx-backend---/demo4.jpg"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/stories/"
+          },
+          "response": []
+        },
+        {
+          "name": "Story Details",
+          "_postman_id": "38354fad-4ef5-46da-9248-8ae0cfd8cc0e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/stories/8/"
+          },
+          "response": []
+        },
+        {
+          "name": "Story Delete",
+          "_postman_id": "8b8c905f-d8d6-441a-84e1-196370e5a323",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/stories/6/"
+          },
+          "response": []
+        },
+        {
+          "name": "Rate Story",
+          "_postman_id": "c0f37f59-c5f5-4ae3-897a-78fd2ebd5656",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\": \"10\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/stories/65/rate/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "dde62d1b-27f2-4a74-93f3-55e82485d5bc"
+    },
+    {
+      "name": "Save Token for Push Notification",
+      "item": [
+        {
+          "name": "Auth Token",
+          "_postman_id": "f58ab638-ceb6-450e-970e-0e7da6e194e5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"password\": \r\n        \"12345\"\r\n    ,\r\n    \"username\": \r\n        \"admin2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/auth/login/",
+            "description": "Auth Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Notification To User",
+          "_postman_id": "bd71894d-506c-4096-b127-8a2c368692a0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Mzk3MTg1LCJqdGkiOiJkMDU5OGY1MWQ0OGY0NzQzOTRjZjY0YTg4MjQwMDhhOCIsInVzZXJfaWQiOjk3Nn0.DslU3c_dbzEfq7zk_6DuR0mrDNSaOaT_Ucd8MOA9Q8g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"send_notification\",\r\n    \"to\": \"eyJ2c55uTA-ZLdWav_ImeQ:APA91bFYSBPycCikUS6d6Qr7urjGZw7w2eXMoC0iTowR33KT-tAAo219cxaCvKmPdRd3ErAF2n_0qau5miJlYAhnVqmkBi9bzE8FXoa55mEPvzIH51aNpl1GxdfCDougar3rmx1_aAfs\",\r\n    \"collapse_key\": \"type_a\",\r\n    \"mutable_content\": true,\r\n    \"content-available\": true,\r\n    \"notification\": {\r\n        \"body\": \"Body : Notification\",\r\n        \"title\": \"Title : Notification\",\r\n        \"content_available\": true,\r\n        \"sound\": \"default\",\r\n        \"priority\": \"high\",\r\n        \"image\": \"https://www.learndash.com/wp-content/uploads/Notification-Add-on.png\"\r\n            },\r\n    \"data\": {\r\n        \"body\": \"Body : Data\",\r\n        \"title\": \"Title : Data\",\r\n        \"sound\": \"default\",\r\n        \"content_available\": true,\r\n        \"priority\": \"high\",\r\n        \"image\": \"https://metaltechalley.com/wp-content/uploads/2017/09/data.jpg\",\r\n        \"deepLink\": \"eduhive://service/course/details/60a0bfe8a7557e43f3de9628\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/notifications/push-notification/"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Notification To List of User",
+          "_postman_id": "c54f0e63-3379-449c-8015-e491a31bf007",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Mzk3MTg1LCJqdGkiOiJkMDU5OGY1MWQ0OGY0NzQzOTRjZjY0YTg4MjQwMDhhOCIsInVzZXJfaWQiOjk3Nn0.DslU3c_dbzEfq7zk_6DuR0mrDNSaOaT_Ucd8MOA9Q8g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"send_notification\",\r\n  \"registration_ids\": [\"cG2-XBCvT1KjU-s4D9BQGV:APA91bGsZC_N_kv62FryIY62q71GRk59slK24swtrPRdGo_h7gI5b9Sjz1iItQppnJAokbwm5Y4HwOj0Vy4wT95O2FcdsD94QFefeGVO3TIoQXHt8wz7o8djpL4wJpSiqDSHjeumUZdT\", \"eyJ2c55uTA-ZLdWav_ImeQ:APA91bFYSBPycCikUS6d6Qr7urjGZw7w2eXMoC0iTowR33KT-tAAo219cxaCvKmPdRd3ErAF2n_0qau5miJlYAhnVqmkBi9bzE8FXoa55mEPvzIH51aNpl1GxdfCDougar3rmx1_aAfs\"],\r\n \"notification\" : {\r\n     \"body\" : \"Body : Notification\",\r\n     \"title\": \"Title : Notification\",\r\n     \"content_available\" : true,\r\n     \"sound\":\"default\",\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://www.learndash.com/wp-content/uploads/Notification-Add-on.png\"\r\n     \r\n },\r\n \"data\" : {\r\n     \"body\" : \"Body : Data\",\r\n     \"title\": \"Title : Data\",\r\n     \"sound\":\"default\",\r\n     \"content_available\" : true,\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://metaltechalley.com/wp-content/uploads/2017/09/data.jpg\"\r\n     \r\n }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/notifications/push-notification/"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Topic",
+          "_postman_id": "f5220869-e6c8-4b74-9a1b-ea48c43898b8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Mzk3MTg1LCJqdGkiOiJkMDU5OGY1MWQ0OGY0NzQzOTRjZjY0YTg4MjQwMDhhOCIsInVzZXJfaWQiOjk3Nn0.DslU3c_dbzEfq7zk_6DuR0mrDNSaOaT_Ucd8MOA9Q8g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"create_topic\",\r\n   \"to\": \"/topics/test\",\r\n   \"registration_tokens\": [\"eyJ2c55uTA-ZLdWav_ImeQ:APA91bFYSBPycCikUS6d6Qr7urjGZw7w2eXMoC0iTowR33KT-tAAo219cxaCvKmPdRd3ErAF2n_0qau5miJlYAhnVqmkBi9bzE8FXoa55mEPvzIH51aNpl1GxdfCDougar3rmx1_aAfs\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/notifications/push-notification/"
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Topic",
+          "_postman_id": "9ade2748-296b-4321-878f-7801111297d8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Mzk3MTg1LCJqdGkiOiJkMDU5OGY1MWQ0OGY0NzQzOTRjZjY0YTg4MjQwMDhhOCIsInVzZXJfaWQiOjk3Nn0.DslU3c_dbzEfq7zk_6DuR0mrDNSaOaT_Ucd8MOA9Q8g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"remove_topic\",\r\n   \"to\": \"/topics/test\",\r\n   \"registration_tokens\": [\"eyJ2c55uTA-ZLdWav_ImeQ:APA91bFYSBPycCikUS6d6Qr7urjGZw7w2eXMoC0iTowR33KT-tAAo219cxaCvKmPdRd3ErAF2n_0qau5miJlYAhnVqmkBi9bzE8FXoa55mEPvzIH51aNpl1GxdfCDougar3rmx1_aAfs\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/notifications/push-notification/"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Notification Using Topic",
+          "_postman_id": "d926e3af-7db2-4088-8ba8-5ad02544d52a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Mzk3MTg1LCJqdGkiOiJkMDU5OGY1MWQ0OGY0NzQzOTRjZjY0YTg4MjQwMDhhOCIsInVzZXJfaWQiOjk3Nn0.DslU3c_dbzEfq7zk_6DuR0mrDNSaOaT_Ucd8MOA9Q8g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"send_notification_topic\",\r\n \"to\" : \"/topics/test\",\r\n \"collapse_key\" : \"type_a\",\r\n \"notification\" : {\r\n     \"body\" : \"Body : Notification\",\r\n     \"title\": \"Title : Notification\",\r\n     \"content_available\" : true,\r\n     \"sound\":\"default\",\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://www.learndash.com/wp-content/uploads/Notification-Add-on.png\"\r\n     \r\n },\r\n \"data\" : {\r\n     \"body\" : \"Body : Data\",\r\n     \"title\": \"Title : Data\",\r\n     \"sound\":\"default\",\r\n     \"content_available\" : true,\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://metaltechalley.com/wp-content/uploads/2017/09/data.jpg\"\r\n     \r\n }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/notifications/push-notification/"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Notification Using Topic With Condition",
+          "_postman_id": "975b448e-6ac5-4679-b24f-965a4d52cc8a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Mzk3MTg1LCJqdGkiOiJkMDU5OGY1MWQ0OGY0NzQzOTRjZjY0YTg4MjQwMDhhOCIsInVzZXJfaWQiOjk3Nn0.DslU3c_dbzEfq7zk_6DuR0mrDNSaOaT_Ucd8MOA9Q8g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"send_notification_topic_condition\",\r\n \"condition\": \"'test' in topics\",\r\n \"collapse_key\" : \"type_a\",\r\n \"notification\" : {\r\n     \"body\" : \"Body : Notification\",\r\n     \"title\": \"Title : Notification\",\r\n     \"content_available\" : true,\r\n     \"sound\":\"default\",\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://www.learndash.com/wp-content/uploads/Notification-Add-on.png\"\r\n     \r\n },\r\n \"data\" : {\r\n     \"body\" : \"Body : Data\",\r\n     \"title\": \"Title : Data\",\r\n     \"sound\":\"default\",\r\n     \"content_available\" : true,\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://metaltechalley.com/wp-content/uploads/2017/09/data.jpg\"\r\n     \r\n }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/notifications/push-notification/"
+          },
+          "response": []
+        },
+        {
+          "name": "Validate FCM",
+          "_postman_id": "37f66f9a-3efb-4b7b-b8b2-c537b2abf864",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Mzk3MTg1LCJqdGkiOiJkMDU5OGY1MWQ0OGY0NzQzOTRjZjY0YTg4MjQwMDhhOCIsInVzZXJfaWQiOjk3Nn0.DslU3c_dbzEfq7zk_6DuR0mrDNSaOaT_Ucd8MOA9Q8g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"send_notification\",\r\n  \"registration_ids\": [\"cG2-XBCvT1KjU-s4D9BQGV:APA91bGsZC_N_kv62FryIY62q71GRk59slK24swtrPRdGo_h7gI5b9Sjz1iItQppnJAokbwm5Y4HwOj0Vy4wT95O2FcdsD94QFefeGVO3TIoQXHt8wz7o8djpL4wJpSiqDSHjeumUZdT\", \"eyJ2c55uTA-ZLdWav_ImeQ:APA91bFYSBPycCikUS6d6Qr7urjGZw7w2eXMoC0iTowR33KT-tAAo219cxaCvKmPdRd3ErAF2n_0qau5miJlYAhnVqmkBi9bzE8FXoa55mEPvzIH51aNpl1GxdfCDougar3rmx1_aAfs\"],\r\n \"notification\" : {\r\n     \"body\" : \"Body : Notification\",\r\n     \"title\": \"Title : Notification\",\r\n     \"content_available\" : true,\r\n     \"sound\":\"default\",\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://www.learndash.com/wp-content/uploads/Notification-Add-on.png\"\r\n     \r\n },\r\n \"data\" : {\r\n     \"body\" : \"Body : Data\",\r\n     \"title\": \"Title : Data\",\r\n     \"sound\":\"default\",\r\n     \"content_available\" : true,\r\n     \"priority\" : \"high\",\r\n     \"image\":\"https://metaltechalley.com/wp-content/uploads/2017/09/data.jpg\"\r\n     \r\n }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://127.0.0.1:8000/api/v1/notifications/verify-fcm-token/{{fcm_token}}/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "ba7fd0e0-92b5-4ab6-a776-76cf330e47c6"
+    },
+    {
+      "name": "Message",
+      "item": [
+        {
+          "name": "All Messsage List",
+          "_postman_id": "b5c207c6-2ecb-4e74-bf7f-3ffae7f1b896",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/message/",
+            "description": "# Completely Useless"
+          },
+          "response": []
+        },
+        {
+          "name": "Conversation Message List",
+          "_postman_id": "427e2e0f-8a3b-4724-811c-f6526529f780",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/message/virus2/",
+            "description": "#### Get Messages of a Specific User"
+          },
+          "response": []
+        },
+        {
+          "name": "Message Update",
+          "_postman_id": "5ac0da4b-c8c9-4780-b93f-010f777251c4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "text",
+                  "value": "Awesomeeee",
+                  "description": "Optional",
+                  "type": "text"
+                },
+                {
+                  "key": "message_type",
+                  "value": "text",
+                  "description": "Optional",
+                  "type": "text"
+                },
+                {
+                  "key": "file_url",
+                  "value": "https://api.nitrx.com/media/images/profile_images/istockphoto-1059661424-612x612.jpeg",
+                  "description": "Optional",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/message/17/",
+            "description": "#### Update Message Body\n\nPossible values for **\"message_type\"**:\n\n*   text\n*   post\n*   story\n*   image\n*   audio\n*   video\n*   file"
+          },
+          "response": []
+        },
+        {
+          "name": "Message Delete",
+          "_postman_id": "c76ed15d-3870-4eb0-8da3-7e3fb6d90891",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/message/10/"
+          },
+          "response": []
+        },
+        {
+          "name": "Thread Create",
+          "_postman_id": "a906d525-ca53-4aa7-9dfe-d101227a3515",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"user\": \"devzakir\",\r\n    \"recipient\": \"bhamilton\",\r\n    \"_id\": \"\",\r\n    \"text\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/message/",
+            "description": "#### Most Probably Useless"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Message",
+          "_postman_id": "54aaff42-22c7-4c5d-9aa4-4e39e1986a95",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "recipient",
+                  "value": "virus2",
+                  "description": "(username) Required",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Hey Virus. Wassup?",
+                  "description": "Required (if message_type is text)",
+                  "type": "text"
+                },
+                {
+                  "key": "message_type",
+                  "value": "text",
+                  "description": "Required",
+                  "type": "text"
+                },
+                {
+                  "key": "file_url",
+                  "value": "",
+                  "description": "Required (if message_type is not text)",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/send_message/",
+            "description": "#### Send a Message to a Specific User\n\nPossible values for **\"message_type\"**:\n\n*   text\n*   post\n*   story\n*   image\n*   audio\n*   video\n*   file"
+          },
+          "response": []
+        },
+        {
+          "name": "Message Users",
+          "_postman_id": "ae7a07d3-6d85-405a-a36a-187b898686fb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/user/",
+            "description": "#### List of Users and Last Messages"
+          },
+          "response": []
+        },
+        {
+          "name": "Upload",
+          "_postman_id": "a9bc014c-74f2-42f8-85f7-0f092adc1918",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file_type",
+                  "value": "image",
+                  "description": "required",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "description": "required",
+                  "type": "file",
+                  "src": "/C:/Users/xayed/Pictures/boat_mountains_lake_135258_4912x7360.jpg"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chat/upload/",
+            "description": "#### Upload Files for sending through Websocket\n\nUse the ID of the file to send this file through websocket."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Thread",
+          "_postman_id": "8e371d8f-886b-4245-8a84-ddf462cccdaa",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/chat/virus2/",
+            "description": "#### Remove Thread with All of its messages"
+          },
+          "response": []
+        },
+        {
+          "name": "Mute Thread",
+          "_postman_id": "e36d1749-9b94-42eb-a045-a64e1776253c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "mute",
+                  "value": "true",
+                  "description": "required",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chat/virus2/mute/",
+            "description": "#### Mute a Thread"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "cd522c7e-c3f5-4275-9a21-495d068b6de4"
+    },
+    {
+      "name": "Group chat",
+      "item": [
+        {
+          "name": "Confirm Read",
+          "_postman_id": "4e2f800c-0bf8-4035-9310-6fdb08c68d80",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4OTU2NTA0LCJqdGkiOiJmOWQwNmM0NmY4NTU0MTAyYTBjY2JjOTg4MjU5ZmZlMCIsInVzZXJfaWQiOjk3Nn0.GonKXiLzw9PM5PnhG7ozeVwDExr3GBDWZiG6pCgKyM4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"is_group\":true,\r\n    \"group_id\":18\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chat/376/report/read/",
+            "description": "### Body\n\n| **name** | **desc** |\n| --- | --- |\n| is_group | boolean |\n| group_id | integer (group_id) |"
+          },
+          "response": []
+        },
+        {
+          "name": "Read Delivery Report",
+          "_postman_id": "79a38014-6551-4315-ae62-91aa20109cb4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4OTU2NTA0LCJqdGkiOiJmOWQwNmM0NmY4NTU0MTAyYTBjY2JjOTg4MjU5ZmZlMCIsInVzZXJfaWQiOjk3Nn0.GonKXiLzw9PM5PnhG7ozeVwDExr3GBDWZiG6pCgKyM4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"is_group\":true,\r\n    \"group_id\":16\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chat/376/report/"
+          },
+          "response": []
+        },
+        {
+          "name": "Confirm Delivery",
+          "_postman_id": "7dc53e5e-fbe7-4213-831d-7017e88a1d34",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4OTU2NTA0LCJqdGkiOiJmOWQwNmM0NmY4NTU0MTAyYTBjY2JjOTg4MjU5ZmZlMCIsInVzZXJfaWQiOjk3Nn0.GonKXiLzw9PM5PnhG7ozeVwDExr3GBDWZiG6pCgKyM4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"is_group\":true,\r\n    \"group_id\":18\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chat/376/report/delivery/"
+          },
+          "response": []
+        },
+        {
+          "name": "Leave group",
+          "_postman_id": "b2cc7a93-0daa-4236-aa12-63de883aadc0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NDU3MTQ2LCJqdGkiOiIyNDNkODc5NjhlNzA0ZTYzOWYyNjk0MzA5ZjVkYzE0MSIsInVzZXJfaWQiOjk3Nn0.81J83d-uzVPaCvg1Tz7rM0vP7f4gHvtXmysPt5OSlrE",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"users\": [5,975,3543,345345,34535]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/2/leave_group/"
+          },
+          "response": []
+        },
+        {
+          "name": "Remove User",
+          "_postman_id": "486e05e6-3563-443f-a745-92d82039bc0c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NDU3MTQ2LCJqdGkiOiIyNDNkODc5NjhlNzA0ZTYzOWYyNjk0MzA5ZjVkYzE0MSIsInVzZXJfaWQiOjk3Nn0.81J83d-uzVPaCvg1Tz7rM0vP7f4gHvtXmysPt5OSlrE",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"users\": [979]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/16/remove_users/"
+          },
+          "response": []
+        },
+        {
+          "name": "Invite Users",
+          "_postman_id": "3799c8cc-ee83-41e6-9219-2c885e11837b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NDU3MTQ2LCJqdGkiOiIyNDNkODc5NjhlNzA0ZTYzOWYyNjk0MzA5ZjVkYzE0MSIsInVzZXJfaWQiOjk3Nn0.81J83d-uzVPaCvg1Tz7rM0vP7f4gHvtXmysPt5OSlrE",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"users\": [\r\n        \"virus2\",\r\n        \"virus3\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/1/invite_users/"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Group",
+          "_postman_id": "f5b0e81b-c8a0-404f-a030-c203b03d7065",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NDU3MTQ2LCJqdGkiOiIyNDNkODc5NjhlNzA0ZTYzOWYyNjk0MzA5ZjVkYzE0MSIsInVzZXJfaWQiOjk3Nn0.81J83d-uzVPaCvg1Tz7rM0vP7f4gHvtXmysPt5OSlrE",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "group_name",
+                  "value": "New Valve",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "users",
+                  "value": "[1,2,3,4]",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "group_icon",
+                  "type": "file",
+                  "src": "/C:/Users/developer/Pictures/Default.jpg"
+                },
+                {
+                  "key": "group_name",
+                  "value": "THe Virus Family",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/"
+          },
+          "response": []
+        },
+        {
+          "name": "Group Details",
+          "_postman_id": "cf36a4d4-8269-45d1-b8dc-d7ac1ab9d938",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NDU3MTQ2LCJqdGkiOiIyNDNkODc5NjhlNzA0ZTYzOWYyNjk0MzA5ZjVkYzE0MSIsInVzZXJfaWQiOjk3Nn0.81J83d-uzVPaCvg1Tz7rM0vP7f4gHvtXmysPt5OSlrE",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "group_name",
+                  "value": "New Group",
+                  "type": "text"
+                },
+                {
+                  "key": "users",
+                  "value": "[1,2,3,4]",
+                  "type": "text"
+                },
+                {
+                  "key": "group_icon",
+                  "type": "file",
+                  "src": "/C:/Users/developer/Pictures/Default.jpg"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/1/"
+          },
+          "response": []
+        },
+        {
+          "name": "Group Users",
+          "_postman_id": "8bd57217-95f9-4f4a-887b-28ec987a2fef",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/1/users/"
+          },
+          "response": []
+        },
+        {
+          "name": "List Groups",
+          "_postman_id": "ad1679ea-4555-4171-8194-310b51cdb117",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NDU3MTQ2LCJqdGkiOiIyNDNkODc5NjhlNzA0ZTYzOWYyNjk0MzA5ZjVkYzE0MSIsInVzZXJfaWQiOjk3Nn0.81J83d-uzVPaCvg1Tz7rM0vP7f4gHvtXmysPt5OSlrE",
+                "type": "text"
+              }
+            ],
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/"
+          },
+          "response": []
+        },
+        {
+          "name": "Accept Invite",
+          "_postman_id": "629065ab-e4e3-43f2-829b-483410cdd4be",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/chatgroups/1/accept_invite/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "c8d83e1d-1e68-4de5-baae-3ab30de94c76"
+    },
+    {
+      "name": "Other",
+      "item": [
+        {
+          "name": "Get business categories",
+          "_postman_id": "4eeddb2c-4d1f-4424-ae78-6a5b48927ad6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQxMDQxMTk0LCJqdGkiOiJjODE5YmQ5ODcwOGU0Y2E2ODFkMzU1N2U1NjVhNGJkOCIsInVzZXJfaWQiOjIwN30.00DR_kz8X-WlAoSC4oGrKfG9LGHvcVb95_P4KcNaSPc"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8000/api/v1/users/business_category/"
+          },
+          "response": []
+        },
+        {
+          "name": "Add user business categories",
+          "_postman_id": "916dfbba-a672-4b71-ae20-310d077e7945",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQxMDQxMTk0LCJqdGkiOiJjODE5YmQ5ODcwOGU0Y2E2ODFkMzU1N2U1NjVhNGJkOCIsInVzZXJfaWQiOjIwN30.00DR_kz8X-WlAoSC4oGrKfG9LGHvcVb95_P4KcNaSPc"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"categories\":[3,5,6]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8000/api/v1/users/business_category/add/"
+          },
+          "response": []
+        },
+        {
+          "name": "remove user business categories",
+          "_postman_id": "ffaa1a66-ea29-490f-9a86-0bcfe2905216",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQxMDQxMTk0LCJqdGkiOiJjODE5YmQ5ODcwOGU0Y2E2ODFkMzU1N2U1NjVhNGJkOCIsInVzZXJfaWQiOjIwN30.00DR_kz8X-WlAoSC4oGrKfG9LGHvcVb95_P4KcNaSPc"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"categories\":[3,5,6]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8000/api/v1/users/business_category/remove/"
+          },
+          "response": []
+        },
+        {
+          "name": "Get user business categories",
+          "_postman_id": "38f75415-871b-4b96-be49-db0b10d98b47",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQxMDQxMTk0LCJqdGkiOiJjODE5YmQ5ODcwOGU0Y2E2ODFkMzU1N2U1NjVhNGJkOCIsInVzZXJfaWQiOjIwN30.00DR_kz8X-WlAoSC4oGrKfG9LGHvcVb95_P4KcNaSPc"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"categories\":[3,5,6]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8000/api/v1/users/business_category/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "4b4af781-d65b-4286-b3a0-bc4469308995"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "{{NITRX_TOKEN}}"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ],
+        "id": "de132a78-8bf3-4e58-80b0-7f436b72f3b1"
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ],
+        "id": "126c8584-79a5-49a3-bdee-57665661d1eb"
+      }
+    }
+  ]
+}
