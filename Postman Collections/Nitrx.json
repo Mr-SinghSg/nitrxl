@@ -1300,6 +1300,12 @@
             "disableBodyPruning": true
           },
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyNzQ3MTQ0LCJqdGkiOiJkMThlMmJkZDMyYjA0MzNmOGI3YWQ3ZWQ0MWM1NGFjMCIsInVzZXJfaWQiOjEwNzN9.wgWBHRzrsA62257bOYaID8SKMjbsp9fdTQYjhfYdsLM"
+              }
+            },
             "method": "POST",
             "header": [
               {
