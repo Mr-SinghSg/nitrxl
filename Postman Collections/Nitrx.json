@@ -1824,6 +1824,40 @@
             "url": "{{NITRX_ENDPOINT}}/users/reported/"
           },
           "response": []
+        },
+        {
+          "name": "Comment Ratings",
+          "id": "1e15f381-2323-4c3a-bb2e-3ff193c7b8f1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyNzUzMDQ0LCJqdGkiOiJjZGFjNGE0ZGM3ZDA0MjFkOGI0MDY5NGIxZDQ4YzRiYiIsInVzZXJfaWQiOjIwN30.yD6h9TRKpZfhqXth1q85Rig8C_yfQ5lI8lIdCcDtY5Y"
+              }
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InZpcnVzMiIsImV4cCI6MTYyNTk5NTU5MCwiZW1haWwiOiJ2aXJ1czJAbWFpbC5jb20ifQ.usWGxaV_n4Lx_Jh7IXzHaoFVG0Nm3IjZWTrv5qFHjRs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\": \"7\",\r\n    \"comment\":\"kjdllhgdfkgd\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{NITRX_ENDPOINT}}/posts/c0a3022b-4050-4276-b0b1-a6c3f64e00c4/comments/"
+          },
+          "response": []
         }
       ],
       "id": "5b14191f-160d-45b0-91da-a106110e15a0"
