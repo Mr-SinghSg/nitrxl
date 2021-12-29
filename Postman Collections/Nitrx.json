@@ -2507,6 +2507,25 @@
             "description": "#### Mute a Thread"
           },
           "response": []
+        },
+        {
+          "name": "Thread Detail",
+          "id": "5e9d7fbf-8db5-41da-8e49-acc197411ad0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzMzYwMzQwLCJqdGkiOiI5YTI2YzE3ODk4OGQ0OTIwYTRlYTc0ZThmZWIzNjVmNSIsInVzZXJfaWQiOjk4NX0.uKUbBLWCbQEyz2Y1ogcQVF-JQnBXELBTCAeoxwA5X6Q"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{NITRX_ENDPOINT}}/message/NQIIESrqsabB/thread_detail/"
+          },
+          "response": []
         }
       ],
       "id": "cd522c7e-c3f5-4275-9a21-495d068b6de4"
