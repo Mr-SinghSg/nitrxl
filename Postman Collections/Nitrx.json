@@ -105,35 +105,35 @@
                   "formdata": [
                     {
                       "key": "username",
-                      "value": "virus18",
+                      "value": "virus19",
                       "contentType": "string",
                       "description": "required",
                       "type": "text"
                     },
                     {
                       "key": "email",
-                      "value": "virus18@mail.com",
+                      "value": "virus19@mail.com",
                       "contentType": "email",
                       "description": "required",
                       "type": "text"
                     },
                     {
                       "key": "password",
-                      "value": "awesomevirus18",
+                      "value": "awesomevirus19",
                       "contentType": "string",
                       "description": "required",
                       "type": "text"
                     },
                     {
                       "key": "first_name",
-                      "value": "John",
+                      "value": "Tony",
                       "contentType": "string",
                       "description": "required",
                       "type": "text"
                     },
                     {
                       "key": "last_name",
-                      "value": "Doe",
+                      "value": "Starc",
                       "contentType": "string",
                       "description": "required",
                       "type": "text"
