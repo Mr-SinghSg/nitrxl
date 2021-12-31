@@ -2597,6 +2597,12 @@
             "disableBodyPruning": true
           },
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNTM0NTEyLCJqdGkiOiI5YzgyMzcxNTdiYjk0MTc5YTZmMmVmODJkZTQwMzdhNiIsInVzZXJfaWQiOjk4NX0.e-rxdmjxPMSRpH6W4ocCD7qUrBjtpbbyDFJczkyZf5g"
+              }
+            },
             "method": "POST",
             "header": [
               {
@@ -2607,14 +2613,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"is_group\":true,\r\n    \"group_id\":18\r\n}",
+              "raw": "{       \r\n    \"is_group\":true,\r\n    \"group_id\":\"m3hMjo3Gi0qX\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
                 }
               }
             },
-            "url": "{{NITRX_ENDPOINT}}/chat/376/report/delivery/"
+            "url": "{{NITRX_ENDPOINT}}/chat/682/report/delivery/"
           },
           "response": []
         },
