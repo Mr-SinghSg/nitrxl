@@ -544,6 +544,12 @@
                 "disableBodyPruning": true
               },
               "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzODAwODE0LCJqdGkiOiI5YjliYjViMzFiNTY0ZTE3YWFjYTkyYzE3NjM2M2M5MiIsInVzZXJfaWQiOjk4OX0.Hi3RBApBMHtzPUdhoFq1pmCCrot1gkfDEvra66Wftio"
+                  }
+                },
                 "method": "PATCH",
                 "header": [],
                 "body": {
@@ -623,8 +629,7 @@
                       "key": "country",
                       "value": "Bangladesh",
                       "description": "optional",
-                      "type": "text",
-                      "disabled": true
+                      "type": "text"
                     },
                     {
                       "key": "search_privacy",
