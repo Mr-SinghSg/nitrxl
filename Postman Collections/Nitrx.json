@@ -2384,6 +2384,12 @@
             "disableBodyPruning": true
           },
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0MzM4NDA0LCJqdGkiOiI2M2Y3YzljZTcyMDE0MDYyOWFmZTZlYTZmNGQyMjZjMiIsInVzZXJfaWQiOjk5MH0.4fSgOCaDYpC9pGjYZ2l08sa4r1ZKqZX9ewR4jQOl0IY"
+              }
+            },
             "method": "POST",
             "header": [],
             "body": {
@@ -2391,7 +2397,7 @@
               "formdata": [
                 {
                   "key": "recipient",
-                  "value": "virus2",
+                  "value": "virus25",
                   "description": "(username) Required",
                   "type": "text"
                 },
