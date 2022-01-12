@@ -2393,7 +2393,7 @@
             "auth": {
               "type": "bearer",
               "bearer": {
-                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0MzM4NDA0LCJqdGkiOiI2M2Y3YzljZTcyMDE0MDYyOWFmZTZlYTZmNGQyMjZjMiIsInVzZXJfaWQiOjk5MH0.4fSgOCaDYpC9pGjYZ2l08sa4r1ZKqZX9ewR4jQOl0IY"
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NTgyNzY5LCJqdGkiOiJiZDg4MTlkYTNmNDE0M2Q5YjhlZWE4ZmQzYzhhMmUxYSIsInVzZXJfaWQiOjk5MX0.FIjvvu0bZs3XtJ4oFWj_7dc9yFlP8MwAxezEGmNGIgU"
               }
             },
             "method": "POST",
@@ -2403,7 +2403,7 @@
               "formdata": [
                 {
                   "key": "recipient",
-                  "value": "virus25",
+                  "value": "virus29",
                   "description": "(username) Required",
                   "type": "text"
                 },
@@ -2415,15 +2415,15 @@
                 },
                 {
                   "key": "message_type",
-                  "value": "text",
+                  "value": "image",
                   "description": "Required",
                   "type": "text"
                 },
                 {
-                  "key": "file_url",
-                  "value": "",
+                  "key": "file",
                   "description": "Required (if message_type is not text)",
-                  "type": "text"
+                  "type": "file",
+                  "src": "/home/developer/Downloads/test.jpg"
                 }
               ]
             },
