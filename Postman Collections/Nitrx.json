@@ -1396,6 +1396,12 @@
             "disableBodyPruning": true
           },
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NzQyNzIwLCJqdGkiOiJkMWIzMjQ0M2EyNjI0MDA1YjAzODdlYTRlMTE3ZWFjOSIsInVzZXJfaWQiOjIwN30.G5OCkYI16laMFuNEm6Q1AraNYLEebTCW50R9T0H8SGc"
+              }
+            },
             "method": "POST",
             "header": [
               {
@@ -1406,7 +1412,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"type\": \"user\",\r\n    \"user\": \"virus2\"\r\n}",
+              "raw": "{\r\n    \"user\": \"bhamilton\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
