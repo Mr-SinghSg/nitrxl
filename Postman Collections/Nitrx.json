@@ -2393,7 +2393,7 @@
             "auth": {
               "type": "bearer",
               "bearer": {
-                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NTgyNzY5LCJqdGkiOiJiZDg4MTlkYTNmNDE0M2Q5YjhlZWE4ZmQzYzhhMmUxYSIsInVzZXJfaWQiOjk5MX0.FIjvvu0bZs3XtJ4oFWj_7dc9yFlP8MwAxezEGmNGIgU"
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NzMyMDk4LCJqdGkiOiI3Yjg5MTI3OGYwZjM0N2E0OTMxMjM4MzhmYzMzNDRlMiIsInVzZXJfaWQiOjk5MX0.L2gZmZtx7pFAx92XRruAo99_uXCYNvj5HDVWUUcake4"
               }
             },
             "method": "POST",
@@ -2415,7 +2415,7 @@
                 },
                 {
                   "key": "message_type",
-                  "value": "image",
+                  "value": "text",
                   "description": "Required",
                   "type": "text"
                 },
@@ -2423,7 +2423,8 @@
                   "key": "file",
                   "description": "Required (if message_type is not text)",
                   "type": "file",
-                  "src": "/home/developer/Downloads/test.jpg"
+                  "src": "/home/developer/Downloads/test.jpg",
+                  "disabled": true
                 }
               ]
             },
