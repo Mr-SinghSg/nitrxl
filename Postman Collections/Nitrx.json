@@ -2393,7 +2393,7 @@
             "auth": {
               "type": "bearer",
               "bearer": {
-                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NzMyMDk4LCJqdGkiOiI3Yjg5MTI3OGYwZjM0N2E0OTMxMjM4MzhmYzMzNDRlMiIsInVzZXJfaWQiOjk5MX0.L2gZmZtx7pFAx92XRruAo99_uXCYNvj5HDVWUUcake4"
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NzM1MjI4LCJqdGkiOiJjYzQzZmNiYzI1YmE0ZTY2YTFjZjQwNjA2YmJjMDYzNiIsInVzZXJfaWQiOjk5MX0.r5yVymp1dBVmrQ5OY4G5WTYUKxLQkc7FiBm_AfyoUjs"
               }
             },
             "method": "POST",
