@@ -1963,7 +1963,7 @@
           "response": []
         },
         {
-          "name": "New Request",
+          "name": "Add Category",
           "id": "84709d01-87c0-453d-a136-8acb685cfdab",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
