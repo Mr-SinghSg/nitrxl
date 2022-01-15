@@ -1961,6 +1961,19 @@
             "url": "{{NITRX_ENDPOINT}}/categories/select/"
           },
           "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "84709d01-87c0-453d-a136-8acb685cfdab",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
         }
       ],
       "id": "de0ca076-eb8d-4927-a401-169e11bc02ad"
