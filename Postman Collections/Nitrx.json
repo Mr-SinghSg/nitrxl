@@ -959,6 +959,12 @@
             "disableBodyPruning": true
           },
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0ODMwNjE0LCJqdGkiOiIzZTU4MjM3ZGYxZDE0ZjM3ODBiZTFjZDA2OTNmMjE3YiIsInVzZXJfaWQiOjIwN30.4j_pP1AWfucF1sulo4hlAKI7sZ1ux20L1VPcPRQdBAM"
+              }
+            },
             "method": "GET",
             "header": [],
             "url": {
