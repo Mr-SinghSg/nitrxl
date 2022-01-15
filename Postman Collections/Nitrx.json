@@ -1971,7 +1971,7 @@
           "request": {
             "method": "POST",
             "header": [],
-            "url": null
+            "url": "{{NITRX_ENDPOINT}}/categories/select/"
           },
           "response": []
         }
