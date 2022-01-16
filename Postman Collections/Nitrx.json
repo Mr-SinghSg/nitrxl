@@ -287,8 +287,8 @@
                   "mode": "formdata",
                   "formdata": [
                     {
-                      "key": "data",
-                      "value": "bhamilton",
+                      "key": "username_or_email",
+                      "value": "akash@nitrx.com",
                       "description": "required",
                       "type": "text"
                     }
