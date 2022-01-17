@@ -854,6 +854,15 @@
               "request": {
                 "method": "POST",
                 "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \"name\":\"www.example.com\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
                 "url": "{{NITRX_ENDPOINT}}/auth/website-url/verify/",
                 "description": "Verify website after adding TXT Record in the domain."
               },
