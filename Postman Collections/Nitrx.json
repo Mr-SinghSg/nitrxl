@@ -873,7 +873,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{ \n  \"TXT\": \"www.example.com\",\n  \"business_id\": \"fjj418psd7hjtpb114ktcmvbjct5b5wb\"\n    }",
+                  "raw": "{ \n  \"website\": \"www.example.com\"\n    }",
                   "options": {
                     "raw": {
                       "language": "json"
