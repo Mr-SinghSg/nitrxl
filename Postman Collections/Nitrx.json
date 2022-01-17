@@ -818,16 +818,13 @@
                 "method": "PUT",
                 "header": [],
                 "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "name",
-                      "value": "example.com",
-                      "description": "optional",
-                      "type": "text",
-                      "disabled": true
+                  "mode": "raw",
+                  "raw": "{ \n    \"name\":\"www.example.com\"\n    }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
                     }
-                  ]
+                  }
                 },
                 "url": "{{NITRX_ENDPOINT}}/auth/website-url/",
                 "description": "Update Website URL of an account.\n\n**NB:** Website must be verified after updating."
