@@ -860,14 +860,14 @@
                 "auth": {
                   "type": "bearer",
                   "bearer": {
-                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0OTk4ODI3LCJqdGkiOiI4YTNiMWUyZmM4YmU0MmZhYWMxMTQ1OTNlMTdkMDU3ZCIsInVzZXJfaWQiOjEwMTB9.NRY4eVKne-1pjDcYQeAHN41e6b8ZCOKKUvJlA83_O0U"
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1MDAwMTMyLCJqdGkiOiJhOTQxNDUyNmU1ZTg0M2VjYmYxNGY1YzRmMGI4YzI1NSIsInVzZXJfaWQiOjEwMTF9.-AiALpeQwCJl0YsJP0UWqUJ4UQvkGHmDSisXp1NyUxA"
                   }
                 },
                 "method": "POST",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{ \n  \"name\": \"www.example.com\"\n    }",
+                  "raw": "{ \n  \"TXT\": \"www.example.com\"\n    }",
                   "options": {
                     "raw": {
                       "language": "json"
