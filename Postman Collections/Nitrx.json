@@ -105,21 +105,21 @@
                   "formdata": [
                     {
                       "key": "username",
-                      "value": "virus19",
+                      "value": "virus51",
                       "contentType": "string",
                       "description": "required",
                       "type": "text"
                     },
                     {
                       "key": "email",
-                      "value": "virus19@mail.com",
+                      "value": "virus51@mail.com",
                       "contentType": "email",
                       "description": "required",
                       "type": "text"
                     },
                     {
                       "key": "password",
-                      "value": "awesomevirus19",
+                      "value": "awesomevirus51",
                       "contentType": "string",
                       "description": "required",
                       "type": "text"
@@ -200,6 +200,11 @@
                       "description": "optional",
                       "type": "text",
                       "disabled": true
+                    },
+                    {
+                      "key": "website",
+                      "value": "www",
+                      "type": "text"
                     }
                   ]
                 },
