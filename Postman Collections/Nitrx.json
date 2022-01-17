@@ -820,6 +820,12 @@
                 "disableBodyPruning": true
               },
               "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1MDAwMTMyLCJqdGkiOiJhOTQxNDUyNmU1ZTg0M2VjYmYxNGY1YzRmMGI4YzI1NSIsInVzZXJfaWQiOjEwMTF9.-AiALpeQwCJl0YsJP0UWqUJ4UQvkGHmDSisXp1NyUxA"
+                  }
+                },
                 "method": "PUT",
                 "header": [],
                 "body": {
