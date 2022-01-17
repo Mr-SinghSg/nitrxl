@@ -873,7 +873,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{ \n  \"website\": \"www.example.com\"\n    }",
+                  "raw": "{ \n  \"name\": \"www.google.com\"\n    }",
                   "options": {
                     "raw": {
                       "language": "json"
