@@ -2996,7 +2996,7 @@
                 }
               }
             },
-            "url": "http://localhost:8000/api/v1/users/business_category/remove/"
+            "url": "{{NITRX_ENDPOINT}}/users/business_category/remove/"
           },
           "response": []
         },
