@@ -2968,7 +2968,7 @@
                 }
               }
             },
-            "url": "http://localhost:8000/api/v1/users/business_category/add/"
+            "url": "{{NITRX_ENDPOINT}}/users/business_category/add/"
           },
           "response": []
         },
